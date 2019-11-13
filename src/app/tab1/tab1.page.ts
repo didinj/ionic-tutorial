@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Player } from '../player';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,17 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  persons = Player;
+  viewType = 'list';
+
+  constructor(public router: Router) {}
+
+  changeToGrid() {
+    this.viewType = 'grid';
+  }
+
+  changeToList() {
+    this.viewType = 'list';
+  }
 
 }
