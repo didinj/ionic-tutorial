@@ -1,7 +1,7 @@
 {
-  "name": "ionic-tutorial",
+  "name": "quickIonic",
   "integrations": {
-    "cordova": {}
+    "capacitor": {}
   },
   "type": "angular"
 }

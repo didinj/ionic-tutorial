@@ -9,14 +9,14 @@ import { Player } from '../player';
 })
 export class Tab2Page implements OnInit {
 
-  details = { id: null, name: '', team: '', photo: '', lat: null, lng: null };
+  details: any;
   persons = Player;
 
   constructor(public route: ActivatedRoute, public router: Router) {}
 
   ngOnInit() {
     if (this.route.snapshot.paramMap.get('id') !== 'null') {
-      const id = parseInt(this.route.snapshot.paramMap.get('id'), 0);
+      const id = parseInt(this.route.snapshot.paramMap.get('id')!, 0);
       this.details = this.persons.find(x => x.id === id);
     }
   }
